@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <button class="btn btn-primary" (click)="onClick()">Click me!</button>
+        </div>
+        <div class="col-xs-12">
+            <p *ngIf="clickStatus">The text is revealed HAHAHAHAHAHAHAHA</p>
+            <p *ngIf="!clickStatus">The text is a secret</p>
+        </div>
+        <div class="col-xs-12" *ngFor="let log of logs; let i = index">
+            <p [ngStyle]="{ backgroundColor: i >= 4 ? 'blue': 'white' }"
+                [ngClass]="{ whiteText: i >= 4 }"
+            >{{ log }}</p>
+        </div>
+    </div>
+</div>

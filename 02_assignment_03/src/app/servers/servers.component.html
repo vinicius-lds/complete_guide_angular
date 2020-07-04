@@ -1,0 +1,56 @@
+<div class="row">
+    <label>Server Name</label>
+</div>
+
+<!-- 
+<div class="row">
+    <input type="text" class="form-control" (input)="onUpdateServerName($event)">
+</div> 
+-->
+
+<div class="row">
+    <input type="text" class="form-control" [(ngModel)]="serverName">
+</div>
+
+<div class="row">
+    <label>{{ serverName }}</label>
+</div>
+
+<div class="row">
+    <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+</div>
+
+<div class="row">
+    <!-- <p [innerText]="allowNewServer"></p> -->
+    <p>{{ serverCreationStatus }}</p>
+</div>
+
+<div class="row">
+    <input type="text" class="form-control" [(ngModel)]="username">
+</div>
+
+<div class="row">
+    <label>{{ username ? 'Username is ' + username : 'Username not found' }}</label>
+</div>
+
+<div class="row">
+    <button class="btn btn-primary" [disabled]="!username" (click)="resetUsername()">Reset Username</button>
+</div>
+
+<div class="row">
+    <app-server></app-server>
+</div>
+
+<div class="row">
+    <app-server></app-server>
+</div>
+
+<div class="row">
+    <app-server></app-server>
+</div>
+
+<div class="row">
+    <app-server></app-server>
+</div>
+
+
